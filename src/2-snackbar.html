@@ -5,35 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snackbar</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/snackbar.css" />
   </head>
   <body>
     <section>
       <a href="./index.html">Go to home</a>
       <h1>Welcome to page with snackbar</h1>
 
-      <div>
+      <div class="snackbar-container">
         <form class="form">
-          <label>
+          <label class="delay__label">
             Delay (ms)
-            <input type="number" name="delay" required />
+            <input class="delay__input" type="number" name="delay" required />
           </label>
 
-          <fieldset>
+          <fieldset class="state__fieldset">
             <legend>State</legend>
-            <label>
-              <input type="radio" name="state" value="fulfilled" required />
-              Fulfilled
-            </label>
-            <label>
-              <input type="radio" name="state" value="rejected" required />
-              Rejected
-            </label>
+
+            <div class="state-option__wrapper">
+              <label class="state-option__label">
+                <input
+                  class="state-option__radio"
+                  type="radio"
+                  name="state"
+                  value="fulfilled"
+                  required
+                />
+                Fulfilled
+              </label>
+            </div>
+            <div class="state-option__wrapper">
+              <label class="state-option__label">
+                <input
+                  class="state-option__radio"
+                  type="radio"
+                  name="state"
+                  value="rejected"
+                  required
+                />
+                Rejected
+              </label>
+            </div>
           </fieldset>
 
-          <button type="submit">Create notification</button>
+          <button class="create-notification__button" type="submit">
+            Create notification
+          </button>
         </form>
       </div>
     </section>
+    <script type="module" src="./js/2-snackbar.js"></script>
   </body>
 </html>
